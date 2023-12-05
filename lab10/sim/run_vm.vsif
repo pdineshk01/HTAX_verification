@@ -45,17 +45,40 @@ group all_test {
       test test5 {
       	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=simple_random_test -define TEST5" ;
            scan_script: "vm_scan.pl ius.flt shell.flt" ;
-	   count : 1;
+	   count : 5;
       };
 
       test test6 {
       	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=multiport_sequential_random_test -define TEST6" ;
            scan_script: "vm_scan.pl ius.flt shell.flt" ;
-	   count : 5;
+	   count : 15;
       };
 
     ------------------------------------------------------------
     -- Add your tests here -------------------------------------
     ------------------------------------------------------------
+ test test7 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=htax_random_test -define TEST7" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 15;
+      };
+
+test test8 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=htax_random_test2 -define TEST8" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 10;
+      };
+
+test test9 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=htax_random_test3 -define TEST9" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 10;
+      };
+
+test test10 {
+      	   run_script: "cd $ENV(PWD) ; irun -f run_vm.f +UVM_TESTNAME=htax_random_test4 -define TEST10" ;
+           scan_script: "vm_scan.pl ius.flt shell.flt" ;
+	   count : 10;
+      };
 
 };

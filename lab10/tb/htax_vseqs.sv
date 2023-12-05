@@ -5,12 +5,18 @@
 ///////////////////////////////////////////////////////////////////////////
 
 class htax_base_vseq extends uvm_sequence #(htax_packet_c);
-	
+
+	htax_packet_c pkt0, pkt1, pkt2, pkt3;
+
 	`uvm_object_utils(htax_base_vseq)
 	`uvm_declare_p_sequencer(htax_virtual_sequencer_c)
 
 	function new (string name = "htax_base_vseq");
 		super.new(name);
+		pkt0 = new();
+		pkt1 = new();
+		pkt2 = new();
+		pkt3 = new();
 	endfunction : new
 
 	task pre_body();

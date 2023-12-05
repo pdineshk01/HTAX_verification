@@ -55,4 +55,7 @@ end
    else
       $fatal("HTAX_RX_INF ERROR : TIMEOUT rx_eot did not occur within 1000 cycles after rx_sot");
 
+
+
+
 endinterface : htax_rx_interface
